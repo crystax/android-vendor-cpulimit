@@ -27,6 +27,10 @@
 
 #include <assert.h>
 
+#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__ANDROID__)
+#include <libgen.h>
+#endif
+
 #include "process_iterator.h"
 #include "process_group.h"
 #include "list.h"
